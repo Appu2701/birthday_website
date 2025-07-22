@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#ff69b4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="balloons" id="balloons"></div>
+    <div class="confetti" id="confetti"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button id="musicToggle" class="music-btn" type="button" aria-label="Toggle music">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">Music</span>
+        </button>
+        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container" role="navigation" aria-label="Page navigation">
+        <div class="nav-dots">
+            <button class="nav-dot active" data-slide="0" type="button" aria-label="Go to welcome page"></button>
+            <button class="nav-dot" data-slide="1" type="button" aria-label="Go to love quotes"></button>
+            <button class="nav-dot" data-slide="2" type="button" aria-label="Go to special wishes"></button>
+            <button class="nav-dot" data-slide="3" type="button" aria-label="Go to memory lane"></button>
+            <button class="nav-dot" data-slide="4" type="button" aria-label="Go to celebration"></button>
+        </div>
+        <div class="swipe-indicator">
+            <span class="swipe-text">Swipe to navigate</span>
+            <span class="swipe-arrows">←  →</span>
+        </div>
+    </nav>
+
+    <!-- Slide Container -->
+    <main class="slide-container" id="slideContainer" role="main">
+        <!-- Slide 1: Welcome -->
+        <section class="slide active" data-slide="0">
+            <div class="container">
+                <div class="welcome-content">
+                    <h1 class="main-title">
+                        <span class="title-word">Happy</span>
+                        <span class="title-word">Birthday</span>
+                        <span class="title-word">Beautiful</span>
+                    </h1>
+                    <div class="heart-decoration" role="img" aria-label="Heart decoration">💖</div>
+                    <p class="welcome-message">Today is all about celebrating you, the most amazing person in my life!</p>
+                    <button class="btn btn--primary celebration-btn" type="button" data-action="start-journey">
+                        Start Journey ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Love Quotes -->
+        <section class="slide" data-slide="1">
+            <div class="container">
+                <div class="quotes-content">
+                    <h2 class="section-title">Words from My Heart 💕</h2>
+                    <div class="quotes-carousel" id="quotesCarousel">
+                        <div class="quote-card active">
+                            <p class="quote">"Happy birthday to the love of my life! Every day with you is better than the last."</p>
+                        </div>
+                        <div class="quote-card">
+                            <p class="quote">"You make my heart skip a beat and add colors to my life! Happy birthday, sweetheart."</p>
+                        </div>
+                        <div class="quote-card">
+                            <p class="quote">"Every moment with you is a treasure I hold close to my heart. Happy birthday, beautiful!"</p>
+                        </div>
+                        <div class="quote-card">
+                            <p class="quote">"You deserve all the happiness in the world today and always."</p>
+                        </div>
+                        <div class="quote-card">
+                            <p class="quote">"Thank you for making every day so special. I love you more than words can say."</p>
+                        </div>
+                    </div>
+                    <div class="quote-navigation">
+                        <button class="quote-nav-btn prev" type="button" aria-label="Previous quote">❮</button>
+                        <div class="quote-dots" id="quoteDots"></div>
+                        <button class="quote-nav-btn next" type="button" aria-label="Next quote">❯</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Special Wishes -->
+        <section class="slide" data-slide="2">
+            <div class="container">
+                <div class="wishes-content">
+                    <h2 class="section-title">My Special Wishes 🌟</h2>
+                    <div class="wishes-grid">
+                        <div class="wish-card" data-wish="0">
+                            <div class="wish-icon">☀️</div>
+                            <p class="wish">"On your special day, I want you to know how grateful I am to have you in my life."</p>
+                        </div>
+                        <div class="wish-card" data-wish="1">
+                            <div class="wish-icon">💝</div>
+                            <p class="wish">"Your smile lights up my world and makes every day brighter."</p>
+                        </div>
+                        <div class="wish-card" data-wish="2">
+                            <div class="wish-icon">🌈</div>
+                            <p class="wish">"You are not just my girlfriend, you are my best friend and my everything."</p>
+                        </div>
+                        <div class="wish-card" data-wish="3">
+                            <div class="wish-icon">⭐</div>
+                            <p class="wish">"May this new year of your life bring you endless joy and beautiful memories."</p>
+                        </div>
+                        <div class="wish-card" data-wish="4">
+                            <div class="wish-icon">💫</div>
+                            <p class="wish">"Happy birthday to the most amazing woman I know!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Memory Lane -->
+        <section class="slide" data-slide="3">
+            <div class="container">
+                <div class="memory-content">
+                    <h2 class="section-title">Beautiful Memories 📸</h2>
+                    <div class="memory-grid">
+                        <div class="memory-card" data-memory="0">
+                            <div class="memory-placeholder">
+                                <div class="memory-icon">💕</div>
+                                <p class="memory-text">Our first date - I knew you were special from that very moment</p>
+                            </div>
+                        </div>
+                        <div class="memory-card" data-memory="1">
+                            <div class="memory-placeholder">
+                                <div class="memory-icon">😂</div>
+                                <p class="memory-text">The way you laugh at my silly jokes makes my heart flutter</p>
+                            </div>
+                        </div>
+                        <div class="memory-card" data-memory="2">
+                            <div class="memory-placeholder">
+                                <div class="memory-icon">💃</div>
+                                <p class="memory-text">Dancing together under the stars on that perfect night</p>
+                            </div>
+                        </div>
+                        <div class="memory-card" data-memory="3">
+                            <div class="memory-placeholder">
+                                <div class="memory-icon">🎉</div>
+                                <p class="memory-text">Every adventure we've shared has been magical because of you</p>
+                            </div>
+                        </div>
+                        <div class="memory-card" data-memory="4">
+                            <div class="memory-placeholder">
+                                <div class="memory-icon">💖</div>
+                                <p class="memory-text">The little moments we share mean everything to me</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="memory-message">Every memory with you is a gift I treasure forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Final Celebration -->
+        <section class="slide" data-slide="4">
+            <div class="container">
+                <div class="celebration-content">
+                    <div class="final-message">
+                        <h1 class="celebration-title">
+                            <span class="sparkle">✨</span>
+                            I Love You
+                            <span class="sparkle">✨</span>
+                        </h1>
+                        <div class="birthday-cake" role="img" aria-label="Birthday cake">🎂</div>
+                        <div class="final-quotes">
+                            <p class="final-quote">"Happy birthday to the one who fills my heart with endless love and my life with endless joy."</p>
+                            <p class="final-quote">"You are my dream come true, and I am thankful every day that you are mine."</p>
+                            <p class="signature">With all my love, forever yours 💕</p>
+                        </div>
+                        <button class="btn btn--primary celebration-btn" type="button" data-action="celebrate">
+                            🎉 Celebrate! 🎉
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Touch Gesture Overlay -->
+    <div class="touch-overlay" id="touchOverlay">
+        <div class="tap-effect" id="tapEffect"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-heart">💖</div>
+        <p class="loading-text">Preparing something special...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
